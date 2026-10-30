@@ -24,7 +24,7 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 
 GRAPH = "https://graph.facebook.com/v21.0"
 REQ_PERMS = ["pages_show_list", "pages_read_engagement", "pages_manage_posts"]
-VERSION = "6.0"
+VERSION = "7.0"
 
 
 # ============================================================ defaults
@@ -1576,6 +1576,7 @@ Deeni page (preview / BG files) →</a></div>
     <input class="dmn" type="number" value="{{p.deeni_min or 45}}" style="width:50px">-
     <input class="dmx" type="number" value="{{p.deeni_max or 60}}" style="width:50px">min
     <button class="sm" onclick="dSet('{{p.id}}')">Set</button>
+    <button class="sm" onclick="dPost('{{p.id}}',this)">Post now</button>
     <span class="tokline" data-dn>{{p.deeni_msg or ''}}</span>
   </div>
   <div class="row news-only">
@@ -1764,7 +1765,17 @@ async function dSet(id){
   const d0=document.querySelector('[data-id="'+id+'"]');
   const d=await call('/deeni/'+id+'/gap','POST',
     {min:d0.querySelector('.dmn').value,max:d0.querySelector('.dmx').value});
-  d0.querySelector('[data-dn]').textContent=d.msg;
+  const el=d0.querySelector('[data-dn]');
+  if(el)el.textContent=d.msg;
+  LOG('deeni gap: '+d.msg,d.ok?'#9f9':'#ff8a8a');
+}
+async function dPost(id,btn){
+  btn.disabled=true;btn.textContent='...';
+  const d=await call('/deeni/'+id+'/post');
+  btn.disabled=false;btn.textContent='Post now';
+  const el=document.querySelector('[data-id="'+id+'"] [data-dn]');
+  if(el)el.textContent=(d.ok?'✅ ':'❌ ')+d.msg;
+  LOG('deeni post: '+d.msg,d.ok?'#9f9':'#ff8a8a');
 }
 async function delPage(id){
   if(!confirm('page remove karun?'))return;
