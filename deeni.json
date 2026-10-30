@@ -1,0 +1,629 @@
+{
+    "items": [
+        {
+            "id": "q01",
+            "text": "Qabr ka azab haq hai. Agar kisi cheez se bach ke bhaagte to qabr ke azab se bhaagte.",
+            "ref": "Tirmizi 2308"
+        },
+        {
+            "id": "q02",
+            "text": "Marne ke baad bande se poocha jayega: tera rab kaun tha, tera deen kya tha, tera nabi kaun tha.",
+            "ref": "Abu Dawud 4753"
+        },
+        {
+            "id": "q03",
+            "text": "Qabr me do farishte aayenge, unke naam Munkar aur Nakir hain. Wo sakht honge.",
+            "ref": "Tirmizi 1071"
+        },
+        {
+            "id": "q04",
+            "text": "Qabr imaan wale ke liye tang ki jayegi, phir uski neki use wasee kar degi.",
+            "ref": "Ahmad 14896"
+        },
+        {
+            "id": "q05",
+            "text": "Qabr jannat ke baghichon me se ek baghicha hai, ya jahannam ke gaddhon me se ek gaddha.",
+            "ref": "Tirmizi 2460"
+        },
+        {
+            "id": "q06",
+            "text": "Maut ka farishta rooh nikalte waqt zalim ke saamne khada hota hai, uska jism sakht ho jata hai.",
+            "ref": "Sahih Muslim 2872"
+        },
+        {
+            "id": "q07",
+            "text": "Rooh nikalte waqt nek bande ko khushkhabri di jati hai, zalim ko dhamki.",
+            "ref": "Quran 41:30"
+        },
+        {
+            "id": "q08",
+            "text": "Qabr me sawal ke waqt imaan wala saabit qadam rahega, munafiq ladkhadayega.",
+            "ref": "Quran 14:27"
+        },
+        {
+            "id": "q09",
+            "text": "Qabron ki ziyarat karo, ye aakhirat ki yaad dilati hai.",
+            "ref": "Sahih Muslim 976"
+        },
+        {
+            "id": "q10",
+            "text": "Maut ka zaiqa har jaan ne chakhna hai, phir hamari taraf laut kar aana hai.",
+            "ref": "Quran 29:57"
+        },
+        {
+            "id": "q11",
+            "text": "Jise maut aayi usne apna sab kuch chhod diya, sirf amal saath gaya.",
+            "ref": "Sahih Bukhari 6514"
+        },
+        {
+            "id": "q12",
+            "text": "Aadmi jis haal me marta hai, usi haal me uthaya jayega.",
+            "ref": "Sahih Muslim 2878"
+        },
+        {
+            "id": "q13",
+            "text": "Qabr ke andhera me roshni kisi ki kaam nahi aayegi, sirf amal ki.",
+            "ref": "Tirmizi 2383"
+        },
+        {
+            "id": "q14",
+            "text": "Murdar ko teen cheezein chhod deti hain: maal, khandaan aur amal. Do laut jate hain, amal reh jata hai.",
+            "ref": "Sahih Bukhari 6514"
+        },
+        {
+            "id": "q15",
+            "text": "Kafan me jeb nahi hoti. Jo duniya me jama kiya, wo peeche reh jata hai.",
+            "ref": "Sahih Muslim 2959"
+        },
+        {
+            "id": "q16",
+            "text": "Qabr me tanhai ka saathi sirf amal hai, chahe chhota ho ya bada.",
+            "ref": "Tirmizi 2383"
+        },
+        {
+            "id": "q17",
+            "text": "Qabristan ki taraf se guzarte waqt agar tum jaante, to tum kam hanste.",
+            "ref": "Sahih Muslim 2961"
+        },
+        {
+            "id": "q18",
+            "text": "Qabr se bada koi manzar nahi. Jo wahan se guzar gaya, wo sab kuch dekh chuka.",
+            "ref": "Tirmizi 2308"
+        },
+        {
+            "id": "q19",
+            "text": "Maut ke waqt har shakhs duniya me wapas jaane ki khwahish karega, taaki neki kar sake.",
+            "ref": "Sahih Bukhari 6512"
+        },
+        {
+            "id": "q20",
+            "text": "Qayamat tak qabr me rehna hai. Ye intezaar ka ghar hai, aaram ka nahi.",
+            "ref": "Sahih Bukhari 6512"
+        },
+        {
+            "id": "q21",
+            "text": "Jo apni qabr ko roz yaad karta hai, duniya uske dil me chhoti hoti jati hai.",
+            "ref": "Tirmizi 2460"
+        },
+        {
+            "id": "q22",
+            "text": "Maut achanak aati hai. Jo aaj kaam taal deta hai, kal ka mauqa use na mile.",
+            "ref": "Sahih Bukhari 6412"
+        },
+        {
+            "id": "q23",
+            "text": "Murdar ke paas amal ke siva koi chiz nahi pahunchti, dua aur sadqa-e-jariya bhi amal hi hain.",
+            "ref": "Sahih Muslim 1631"
+        },
+        {
+            "id": "q24",
+            "text": "Jisne qabr ko tayyar nahi kiya, wo musafir nahi, raste me hi hai.",
+            "ref": "Tirmizi 2308"
+        },
+        {
+            "id": "q25",
+            "text": "Qabr me nek amal farishton ki shakal me aayega aur kahega: main tere saath hoon.",
+            "ref": "Sahih Muslim 2871"
+        },
+        {
+            "id": "q26",
+            "text": "Jhoota, khayanat karne wala aur zulm karne wala — inki qabr tang hogi.",
+            "ref": "Tirmizi 1071"
+        },
+        {
+            "id": "q27",
+            "text": "Qabr ke azab se bacho. Kaash tum dekh paate ki qabr me kya hota hai.",
+            "ref": "Tirmizi 2460"
+        },
+        {
+            "id": "q28",
+            "text": "Maut ke baad koi amal qabool nahi hota. Abhi jo karna hai, abhi karo.",
+            "ref": "Sahih Bukhari 6412"
+        },
+        {
+            "id": "q29",
+            "text": "Zameen aadmi ke jism ko kha jati hai, sirf reed ki haddi reh jati hai, usi se uthna hai.",
+            "ref": "Sahih Muslim 2955"
+        },
+        {
+            "id": "q30",
+            "text": "Qabr me bichhona andhera hai, chaadar amal hai.",
+            "ref": "Tirmizi 2383"
+        },
+        {
+            "id": "q31",
+            "text": "Jo duniya me uncha ghar banata hai, qabr me uska thikana chhota ho jata hai.",
+            "ref": "Sahih Muslim 2959"
+        },
+        {
+            "id": "q32",
+            "text": "Maut ka farishta kisi ko chhodta nahi, chahe wo raja ho ya faqeer.",
+            "ref": "Quran 3:185"
+        },
+        {
+            "id": "q33",
+            "text": "Qabr me sawal se pehle kabhi kisi ne taiyari nahi ki, phir bhi sab se poocha jayega.",
+            "ref": "Abu Dawud 4753"
+        },
+        {
+            "id": "q34",
+            "text": "Apne marhoomin ko yaad karo, unke liye dua karo — kal tum bhi unhi me shamil ho.",
+            "ref": "Sahih Muslim 976"
+        },
+        {
+            "id": "q35",
+            "text": "Maut ke waqt maal ka hisaab duniya me hi le lo, wahan sirf pachtana hai.",
+            "ref": "Tirmizi 2417"
+        },
+        {
+            "id": "q36",
+            "text": "Qabr sabse sacha aaina hai. Wo dikhata hai ki duniya kitni thodi thi.",
+            "ref": "Tirmizi 2308"
+        },
+        {
+            "id": "q37",
+            "text": "Jise qabr yaad dilati hai, wo duniya ke fareb se bach jata hai.",
+            "ref": "Tirmizi 2460"
+        },
+        {
+            "id": "q38",
+            "text": "Maut ka pehla manzil qabr hai. Wahan se aage koi wapsi nahi.",
+            "ref": "Tirmizi 2308"
+        },
+        {
+            "id": "q39",
+            "text": "Kandha dene wale bhi laut jayenge, qabr me tanha rehna hoga.",
+            "ref": "Sahih Bukhari 6514"
+        },
+        {
+            "id": "q40",
+            "text": "Qabr ke andar ka manzar dekhne ke baad duniya ki har khushi halki lagti hai.",
+            "ref": "Sahih Muslim 2961"
+        },
+        {
+            "id": "h01",
+            "text": "Jahannam ki aag dunya ki aag se sattar guna zyada garm hai.",
+            "ref": "Sahih Bukhari 3265"
+        },
+        {
+            "id": "h02",
+            "text": "Jahannam ka azab aisa hai ki agar uska ek kan duniya pe khol diya jaye, sab jal jaye.",
+            "ref": "Sahih Bukhari 6663"
+        },
+        {
+            "id": "h03",
+            "text": "Jahannam me sabse halka azab wala wahi hoga jiske pairon me aag ke angaar rakhe jayenge.",
+            "ref": "Sahih Bukhari 6562"
+        },
+        {
+            "id": "h04",
+            "text": "Jahannam kehti hai: mera hissa aur badha do, yahan tak ki Allah apna qadam usme rakhega.",
+            "ref": "Sahih Bukhari 6661"
+        },
+        {
+            "id": "h05",
+            "text": "Jahannam ke saat darwaze hain, har darwaze ka apna hissa muqarrar hai.",
+            "ref": "Quran 15:44"
+        },
+        {
+            "id": "h06",
+            "text": "Jahannam me ek darakht hai jiska naam Zaqqum hai. Uska phal kareela jaisa hai.",
+            "ref": "Sahih Muslim 2864"
+        },
+        {
+            "id": "h07",
+            "text": "Jahannam me aadmi ka rona aisa hoga ki aansu gaalon pe daudenge, phir khatam ho jayenge, phir khoon roenge.",
+            "ref": "Tirmizi 2585"
+        },
+        {
+            "id": "h08",
+            "text": "Jahannam me daalne wale farishte sakht hain, wo azab kam nahi karte.",
+            "ref": "Quran 66:6"
+        },
+        {
+            "id": "h09",
+            "text": "Dozakh me log dhuye me doobe rahenge, ek doosre ko pehchanenge bhi nahi.",
+            "ref": "Sahih Muslim 2808"
+        },
+        {
+            "id": "h10",
+            "text": "Jahannam ke andar ka andhera aisa hai ki ek arsa tak kuch nazar nahi aayega.",
+            "ref": "Sahih Muslim 2702"
+        },
+        {
+            "id": "h11",
+            "text": "Jahannam ki hawa-e-garm se chehre jhalas jayenge, ruh thehar nahi payegi.",
+            "ref": "Sahih Muslim 2757"
+        },
+        {
+            "id": "h12",
+            "text": "Jahannam me sone ke angaar hain jo gardan me daale jayenge.",
+            "ref": "Sahih Muslim 1002"
+        },
+        {
+            "id": "h13",
+            "text": "Jahannam ka pet khali nahi hota, wo barhta rehta hai.",
+            "ref": "Sahih Bukhari 4850"
+        },
+        {
+            "id": "h14",
+            "text": "Jahannam me ek aisi aag hai jise jinn aur insaan dono khate hain, garmi dil tak pahunchti hai.",
+            "ref": "Sahih Muslim 2842"
+        },
+        {
+            "id": "h15",
+            "text": "Jahannam me ek wadi hai jiska naam Hub hai. Usme riya karne wale qaari dalenge.",
+            "ref": "Tirmizi 2565"
+        },
+        {
+            "id": "h16",
+            "text": "Jahannam me ek ghaati hai jahan janwar ki ghaflat karne wale bhi jaenge.",
+            "ref": "Tirmizi 2419"
+        },
+        {
+            "id": "h17",
+            "text": "Jahannam me daalne wale aise hain jo azab kisi par na rukenge, chahe apna hi ho.",
+            "ref": "Quran 96:18"
+        },
+        {
+            "id": "h18",
+            "text": "Jahannam ke azab me ek sadi aisi hai ki insaan apne hi jism ko bhool jayega.",
+            "ref": "Sahih Muslim 2702"
+        },
+        {
+            "id": "h19",
+            "text": "Jahannam me ghutno ke bal ghisat kar chalna hoga, sar jhuka hua hoga.",
+            "ref": "Quran 54:48"
+        },
+        {
+            "id": "h20",
+            "text": "Jahannam ke aadmi ke sar pe pighla hua seesa daala jayega, dimaag ubal jayega.",
+            "ref": "Sahih Muslim 2133"
+        },
+        {
+            "id": "h21",
+            "text": "Dozakh me log aag me jhulas kar dobara jilaye jayenge, jism ka rang kaala ho jayega.",
+            "ref": "Quran 14:50"
+        },
+        {
+            "id": "h22",
+            "text": "Jahannam me kapde aag ke honge, aag hi libaas hogi.",
+            "ref": "Quran 14:50"
+        },
+        {
+            "id": "h23",
+            "text": "Dozakh ka khaana zaqqum hoga, jo pet me aag ki tarah ubalti hai.",
+            "ref": "Quran 44:45-46"
+        },
+        {
+            "id": "h24",
+            "text": "Jahannam me pyaas aisi hogi ki koi paani nahi milega, sirf khaula hua peep.",
+            "ref": "Quran 14:16"
+        },
+        {
+            "id": "h25",
+            "text": "Jahannam me log apne apne gunahon ke mutabiq azab me honge, koi halka koi sakht.",
+            "ref": "Sahih Muslim 2582"
+        },
+        {
+            "id": "h26",
+            "text": "Jahannam se nijaat ke liye aaj dua karo, kyunki wahan dua ki ijabat nahi hogi.",
+            "ref": "Quran 23:107"
+        },
+        {
+            "id": "h27",
+            "text": "Dozakh ke aadmi aansu ki tarah baha kar aag bujhane ki koshish karenge, na bujhegi.",
+            "ref": "Sahih Muslim 2702"
+        },
+        {
+            "id": "h28",
+            "text": "Jahannam me akela rehna, cheekhna, aur sunne wala koi na hona — yahi azab hai.",
+            "ref": "Quran 26:100-101"
+        },
+        {
+            "id": "h29",
+            "text": "Jahannam ke aadmi aag ke dher par honge, duniya ke maal unke kaam nahi aayenge.",
+            "ref": "Sahih Bukhari 1403"
+        },
+        {
+            "id": "h30",
+            "text": "Dozakh ke darwaze khule hain, aaj ka mauqa jannat ke darwaze bhi khule hain.",
+            "ref": "Quran 39:71-73"
+        },
+        {
+            "id": "h31",
+            "text": "Jahannam me na maut aayegi na aaram, sirf dard rehta hai.",
+            "ref": "Quran 20:74"
+        },
+        {
+            "id": "h32",
+            "text": "Jahannam me amal ka koi fayda nahi, sirf pachtana hai.",
+            "ref": "Sahih Muslim 2874"
+        },
+        {
+            "id": "h33",
+            "text": "Dozakh me naamaz ka, zakat ka, sach ka poocha jayega — sab udhar hai.",
+            "ref": "Tirmizi 413"
+        },
+        {
+            "id": "h34",
+            "text": "Jahannam me logon ki cheekh suni jayegi, lafz samajh nahi aayenge, bas dard ki awaaz hogi.",
+            "ref": "Sahih Muslim 2702"
+        },
+        {
+            "id": "h35",
+            "text": "Jahannam ki haalat aisi hai ki zubaan bhi jal jayegi, bolna mushkil hoga.",
+            "ref": "Quran 44:47"
+        },
+        {
+            "id": "h36",
+            "text": "Dozakh me daalne se pehle teen baar poocha jayega: kaun tha tera rab, kya tha tera deen.",
+            "ref": "Abu Dawud 4753"
+        },
+        {
+            "id": "h37",
+            "text": "Jahannam me dakhil hote waqt har aadmi ko apna amal dikhaya jayega, ek chhota bhi nahi chhutega.",
+            "ref": "Quran 54:52-53"
+        },
+        {
+            "id": "h38",
+            "text": "Jahannam ke aadmi ko duniya me wapas bulaya jayega, phir na kuch saath aayega na kuch kar sakega.",
+            "ref": "Sahih Bukhari 6512"
+        },
+        {
+            "id": "h39",
+            "text": "Dozakh ki aag uske apne maal se bhi bhadkegi, jisne zakat nahi di.",
+            "ref": "Sahih Bukhari 1403"
+        },
+        {
+            "id": "h40",
+            "text": "Jahannam me sabse pehle namaz ka hisaab hoga, agar namaz hi gayi to baaki kya bachega.",
+            "ref": "Tirmizi 413"
+        },
+        {
+            "id": "j01",
+            "text": "Jannat me wo hai jo kisi aankh ne dekha nahi, kaan ne suna nahi, dil me nahi guzra.",
+            "ref": "Sahih Bukhari 3244"
+        },
+        {
+            "id": "j02",
+            "text": "Jannat me ek darakht hai jiske saaye me sawaar sattar saal tak chalta rahega.",
+            "ref": "Sahih Bukhari 3252"
+        },
+        {
+            "id": "j03",
+            "text": "Jannat ki eent sone aur chandi ki hai, uski mitti zafran ki.",
+            "ref": "Tirmizi 2526"
+        },
+        {
+            "id": "j04",
+            "text": "Jo jannat me dakhil hoga wo kabhi dukhi nahi hoga, na uski maut aayegi.",
+            "ref": "Sahih Muslim 2837"
+        },
+        {
+            "id": "j05",
+            "text": "Allah farmata hai: maine apne nek bandon ke liye wo taiyar kar rakha hai jo kisi aankh ne dekha nahi.",
+            "ref": "Sahih Bukhari 7498"
+        },
+        {
+            "id": "j06",
+            "text": "Jannat ke aath darwaze hain, aur jahannam ke saat.",
+            "ref": "Sahih Bukhari 7277"
+        },
+        {
+            "id": "j07",
+            "text": "Jannat me dudh, shehad aur sharaab ki nehrein hain, kisi dukh ke saath nahi.",
+            "ref": "Quran 47:15"
+        },
+        {
+            "id": "j08",
+            "text": "Jannat me na koi fuzool baat hogi na jhoot, sirf salam aur salamti.",
+            "ref": "Quran 19:62"
+        },
+        {
+            "id": "j09",
+            "text": "Jannat me log hamesha jawan rahenge, kabhi budhe nahi honge.",
+            "ref": "Sahih Muslim 2837"
+        },
+        {
+            "id": "j10",
+            "text": "Jannat walon ka khana halq me na rukega, na unhein peshab ki zaroorat hogi.",
+            "ref": "Sahih Muslim 2836"
+        },
+        {
+            "id": "j11",
+            "text": "Jannat me sab ka dil saaf hoga, kisi me kinna nahi hoga.",
+            "ref": "Quran 15:47"
+        },
+        {
+            "id": "j12",
+            "text": "Jannat me ek din aisa hoga jisme suraj ki garmi nahi, sirf noor hoga.",
+            "ref": "Sahih Muslim 2837"
+        },
+        {
+            "id": "j13",
+            "text": "Jannat walon ke chehre roshan honge, unhein dekh kar khushi hogi.",
+            "ref": "Quran 3:107"
+        },
+        {
+            "id": "j14",
+            "text": "Jannat ki khushbu itni door se aayegi ki musafir uska rasta pakad lega.",
+            "ref": "Tirmizi 2526"
+        },
+        {
+            "id": "j15",
+            "text": "Jannat me mahal aur bagh honge, nehrein uske neeche bahengi.",
+            "ref": "Quran 9:72"
+        },
+        {
+            "id": "j16",
+            "text": "Jannat me hamesha ki zindagi hai, kabhi khatam nahi hogi.",
+            "ref": "Quran 44:56"
+        },
+        {
+            "id": "j17",
+            "text": "Jannat ke darwaze par salam kaha jayega, phir andar dakhil kiya jayega.",
+            "ref": "Quran 39:73"
+        },
+        {
+            "id": "j18",
+            "text": "Jannat walon ko dekh kar yakeen hoga ki duniya ka har dukh chhota tha.",
+            "ref": "Sahih Muslim 2807"
+        },
+        {
+            "id": "j19",
+            "text": "Jannat me sabse bada inaam Allah ka deedar hoga.",
+            "ref": "Sahih Muslim 181"
+        },
+        {
+            "id": "j20",
+            "text": "Jannat ka rasta namaz aur amal se guzarta hai, aaj hi uspe chal do.",
+            "ref": "Quran 23:1-11"
+        },
+        {
+            "id": "a01",
+            "text": "Agar tum jaante jo main jaanta, kam hanste aur zyada rote.",
+            "ref": "Sahih Bukhari 6486"
+        },
+        {
+            "id": "a02",
+            "text": "Jise hisaab se poch-gachh hogi, wo halaak ho jayega.",
+            "ref": "Sahih Bukhari 6536"
+        },
+        {
+            "id": "a03",
+            "text": "Qayamat ke din suraj qareeb kar diya jayega, paseena kaan tak pahunchega.",
+            "ref": "Sahih Muslim 2864"
+        },
+        {
+            "id": "a04",
+            "text": "Qayamat ke din koi apne bhai, maa-baap aur aulaad se bhaag jayega.",
+            "ref": "Quran 80:34-36"
+        },
+        {
+            "id": "a05",
+            "text": "Qayamat ke din amal nama khulega, koi chhota-bada amal baaqi nahi rahega.",
+            "ref": "Quran 54:53"
+        },
+        {
+            "id": "a06",
+            "text": "Jiski nekiyon ka wazan bhaari wo bach gaya, jiski halki wo barbaad.",
+            "ref": "Quran 101:6-9"
+        },
+        {
+            "id": "a07",
+            "text": "Qayamat ke din zulm andhere honge, zaalim ka haq kisi se bhi chhoota hua nahi chhodega.",
+            "ref": "Sahih Muslim 2582"
+        },
+        {
+            "id": "a08",
+            "text": "Jo yateem ka maal zulm se khata hai, wo pet me aag bharta hai.",
+            "ref": "Sahih Bukhari 6537"
+        },
+        {
+            "id": "a09",
+            "text": "Sood khane wale ko qayamat ke din pagal ki tarah uthaya jayega.",
+            "ref": "Sahih Bukhari 2758"
+        },
+        {
+            "id": "a10",
+            "text": "Qayamat ke din pahaad dhuye ki tarah ud jayenge, zameen tehrabandi ki tarah phail jayegi.",
+            "ref": "Quran 56:5-6"
+        },
+        {
+            "id": "a11",
+            "text": "Qayamat ke din haamila ka pet gir jayega, maa apne bachche ko bhool jayegi.",
+            "ref": "Quran 22:2"
+        },
+        {
+            "id": "a12",
+            "text": "Jo takabbur se chalta hai, use zameen ke andar utaar diya jayega, qayamat tak dhadakta rahega.",
+            "ref": "Tirmizi 2498"
+        },
+        {
+            "id": "a13",
+            "text": "Qayamat ke din har shakhs ghabrahat me hoga, anbiya bhi meri jaan meri jaan kahenge.",
+            "ref": "Sahih Bukhari 3361"
+        },
+        {
+            "id": "a14",
+            "text": "Har shakhs se uska waqt poocha jayega ki kis kaam me kharch kiya.",
+            "ref": "Tirmizi 2417"
+        },
+        {
+            "id": "a15",
+            "text": "Qayamat ke din maal ek taraf rakh diya jayega, sirf amal kaam aayega.",
+            "ref": "Sahih Bukhari 6514"
+        },
+        {
+            "id": "a16",
+            "text": "Jiski zubaan mehfooz nahi, uski namaz bhi uske kaam nahi aayegi.",
+            "ref": "Tirmizi 2501"
+        },
+        {
+            "id": "a17",
+            "text": "Gheebat karne wale ke liye qayamat ke din hisaab sakht hoga.",
+            "ref": "Sahih Muslim 2564"
+        },
+        {
+            "id": "a18",
+            "text": "Qayamat ke din nekiyon ke pahaad aayenge, par log unhein uda denge — ye wo honge jinhone Allah se dar ke akela bhi gunah kiya.",
+            "ref": "Ibn Majah 4204"
+        },
+        {
+            "id": "a19",
+            "text": "Qarz ka haq ada kiye baghair mar gaya, uska maal aag ban jayega.",
+            "ref": "Tabarani"
+        },
+        {
+            "id": "a20",
+            "text": "Paanch cheezon se pehle paanch cheezon ko ganimat samjho: jawani, sehat, maal, fursat, zindagi.",
+            "ref": "Sahih Bukhari 6416"
+        },
+        {
+            "id": "a21",
+            "text": "Do neamtein hain jinme log dhoke me hain: sehat aur fursat.",
+            "ref": "Sahih Bukhari 6412"
+        },
+        {
+            "id": "a22",
+            "text": "Riya se padhi namaz qayamat ke din aag me daali jayegi.",
+            "ref": "Ibn Majah 4204"
+        },
+        {
+            "id": "a23",
+            "text": "Jisne kisi ko qatl kiya, uska qisas qayamat me liya jayega.",
+            "ref": "Sahih Muslim 1670"
+        },
+        {
+            "id": "a24",
+            "text": "Qayamat ke din zameen aisi hogi ki ek doodh wali oont bhi jagah na payegi.",
+            "ref": "Sahih Bukhari 6524"
+        },
+        {
+            "id": "a25",
+            "text": "Duniya me musafir ki tarah raho, jaise koi raste ka musafir hota hai.",
+            "ref": "Sahih Bukhari 6416"
+        }
+    ]
+}
