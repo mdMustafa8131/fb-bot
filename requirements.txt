@@ -1,4 +1,5 @@
-flask
-requests
-feedparser
-pillow
+Flask==3.0.3
+requests==2.32.3
+feedparser==6.0.11
+Pillow==10.4.0
+gunicorn==22.0.0
