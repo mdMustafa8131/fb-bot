@@ -12,6 +12,7 @@ STARTED = False
 NEXT = {}
 
 GOLD = (212, 175, 55)
+FOOT = "Follow to get daily new hadiths"
 
 CATS = ("jahannam", "jannat", "qabr", "aam")
 
@@ -25,10 +26,11 @@ FALLBACK = {
 KEY = {
     "jahannam": ("jahannam", "aag", "azab", "halaak", "paseena", "sakht",
                  "zulm", "andhera", "hisaab", "qayamat", "dozakh", "sood",
-                 "halka", "hisaab", "jahannam"),
+                 "halka", "wazan", "qatl", "gheebat"),
     "jannat": ("jannat", "bahisht", "bahaar", "baagh", "khushbu", "hoor",
-               "nemat", "neki", "sadqa", "reham", "muskura", "jannat"),
-    "qabr": ("qabr", "maut", "kafan", "dafan", "qabristan", "marne"),
+               "nemat", "neki", "sadqa", "reham", "muskura"),
+    "qabr": ("qabr", "maut", "kafan", "dafan", "qabristan", "marne", "murdar",
+             "marhoom"),
 }
 
 
@@ -170,12 +172,13 @@ def build(path, used=None):
     body = app.font(56, True, False)
     ref = app.font(28, False, False)
     head = app.font(30, True, False)
+    foot = app.font(23, False, False)
 
     d.text((540, m + 58), "HADEES-E-NABAWI", font=head, fill=GOLD, anchor="mm")
 
-    lines = wrap(d, it["text"], body, 1080 - 2 * m - 90)[:9]
+    lines = wrap(d, it["text"], body, 1080 - 2 * m - 90)[:8]
     lh = 74
-    y = (1080 - len(lines) * lh) // 2 + 18
+    y = (1080 - len(lines) * lh) // 2 - 6
     for ln in lines:
         d.text((540, y + 2), ln, font=body, fill=(0, 0, 0), anchor="mm")
         d.text((540, y), ln, font=body, fill=(250, 248, 242), anchor="mm")
@@ -184,6 +187,10 @@ def build(path, used=None):
     d.line([(540 - 70, y + 24), (540 + 70, y + 24)], fill=GOLD, width=2)
     d.text((540, y + 70), it.get("ref", ""), font=ref, fill=GOLD, anchor="mm")
 
+    fy = 1080 - m - 42
+    d.line([(540 - 120, fy - 26), (540 + 120, fy - 26)], fill=(110, 95, 45), width=1)
+    d.text((540, fy), FOOT, font=foot, fill=(196, 186, 158), anchor="mm")
+
     if path:
         img.save(path, quality=93, subsampling=0, optimize=True)
     return True, it
@@ -191,7 +198,7 @@ def build(path, used=None):
 
 def caption(it):
     return (f"{it['text']}\n\n— {it.get('ref', '')}\n\n"
-            f"Allah humein amal ki taufeeq de. Aameen 🤲\n\n"
+            f"Roz nayi hadith ke liye page follow karo 🤲\n\n"
             f"#Hadith #Hadees #Islam #Deen #Sunnah #Jannat #Jahannam #Hikmah")
 
 
