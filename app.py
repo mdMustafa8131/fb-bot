@@ -24,7 +24,7 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 
 GRAPH = "https://graph.facebook.com/v21.0"
 REQ_PERMS = ["pages_show_list", "pages_read_engagement", "pages_manage_posts"]
-VERSION = "5.0"
+VERSION = "6.0"
 
 
 # ============================================================ defaults
@@ -165,6 +165,10 @@ def cfg_load():
         p.setdefault("auto", False)
         p.setdefault("token", "")
         p.setdefault("token_exp", None)
+        p.setdefault("deeni", False)
+        p.setdefault("deeni_min", 45)
+        p.setdefault("deeni_max", 60)
+        p.setdefault("deeni_msg", "")
         for k, v in PAGE_DEFAULTS.items():
             p.setdefault(k, c["settings"].get(k, v))
     return c
@@ -347,8 +351,9 @@ def add_page_rec(page_id, name, tok, mode, exp=None):
     CFG["pages"].append({
         "id": "pg" + str(int(time.time()))[-6:] + str(random.randint(10, 99)),
         "name": name or "Page", "page_id": page_id, "token": tok, "token_exp": exp,
-        "mode": mode if mode in ("news", "fb") else "news", "auto": False,
+        "mode": mode if mode in ("news", "fb", "deeni") else "news", "auto": False,
         "selected": ["India Top News"], "link": "", "count": 20,
+        "deeni": mode == "deeni", "deeni_min": 45, "deeni_max": 60, "deeni_msg": "",
         **{k: CFG["settings"].get(k, v) for k, v in PAGE_DEFAULTS.items()},
     })
     return True
@@ -998,10 +1003,10 @@ def worker(pid):
             if p["mode"] == "news" and now >= next_fetch:
                 fetch_page(pid)
                 next_fetch = now + clamp(p.get("fetch_min"), 2, 720, 30) * 60
-            if r["pool"]:
+            if p["mode"] in ("news", "fb") and r["pool"]:
                 post_page(pid)
-            else:
-                r["msg"] = "pool khaali — fetch ka wait"
+            elif p["mode"] == "deeni":
+                r["msg"] = "deeni apna scheduler chalata hai"
         except Exception as e:
             r["msg"] = "err: " + str(e)[:70]
             print("[worker err]", repr(e))
@@ -1249,6 +1254,10 @@ def auto_on(pid):
         return jsonify({"ok": False, "msg": "page nahi mila"})
     if not p.get("page_id") or not p.get("token"):
         return jsonify({"ok": False, "msg": "❌ pehle token save karo"})
+    if p["mode"] == "deeni":
+        p["deeni"] = True
+        p.setdefault("deeni_min", 45)
+        p.setdefault("deeni_max", 60)
     if p["mode"] == "fb" and not p.get("link"):
         return jsonify({"ok": False, "msg": "❌ pehle link save karo"})
     if p["mode"] == "news" and not (p.get("selected") or []):
@@ -1494,6 +1503,11 @@ font-size:12px;margin-bottom:12px;line-height:1.5}
 font-size:12px;margin-bottom:12px}
 .pg[data-mode="fb"] .cats,.pg[data-mode="fb"] .news-only{display:none}
 .pg[data-mode="news"] .fb-only{display:none}
+.pg[data-mode="deeni"] .cats,.pg[data-mode="deeni"] .news-only{display:none}
+.pg[data-mode="deeni"] .fb-only{display:none}
+.drow{background:#141b16;border:1px solid #2a3520;border-radius:8px;padding:6px}
+.drow button{background:#1d2a20}
+.drow button.on{background:#6b2f2f}
 .tokline{font-size:11px;color:#888}
 details summary{cursor:pointer;font-size:12px;color:#ff9dd0;margin:4px 0}
 #errbar{background:#2a1010;border:1px solid #7d2f2f;border-radius:8px;padding:8px 10px;
@@ -1504,6 +1518,8 @@ white-space:pre-wrap;word-break:break-all}
 .small{font-size:11px;color:#888}
 </style></head><body>
 <h1>FB Bot — Multi Page <span class="pid">v{{ver}}</span></h1>
+<div class="row"><a href="/deeni" style="color:#d4af37;font-size:12px">
+Deeni page (preview / BG files) →</a></div>
 
 <div id="diag">diagnostics: checking...</div>
 <div id="errbar"><b>EVENT LOG</b> <button class="sm" onclick="CLR()">clear</button>
@@ -1542,6 +1558,7 @@ white-space:pre-wrap;word-break:break-all}
   <div class="row">
     <button class="{{'on' if p.mode=='news'}}" onclick="setMode('{{p.id}}','news')">News</button>
     <button class="{{'on' if p.mode=='fb'}}" onclick="setMode('{{p.id}}','fb')">FB photos</button>
+    <button class="{{'on' if p.mode=='deeni'}}" onclick="setMode('{{p.id}}','deeni')">Deeni</button>
     <button class="auto" onclick="autoP('{{p.id}}',this)">Auto</button>
     <button onclick="stopP('{{p.id}}')">Stop</button>
     <button onclick="postNow('{{p.id}}')">Post Now</button>
@@ -1552,6 +1569,14 @@ white-space:pre-wrap;word-break:break-all}
     <input class="ptok" type="password" placeholder="naya token (khali = purana)" style="width:290px">
     <button class="sm" onclick="saveTok('{{p.id}}',this)">Save token</button>
     <span class="tokline" data-tok></span>
+  </div>
+  <div class="row drow">
+    <button class="{{'on' if p.deeni}}" onclick="dTog('{{p.id}}')">
+      Deeni {{'ON' if p.deeni else 'OFF'}}</button>
+    <input class="dmn" type="number" value="{{p.deeni_min or 45}}" style="width:50px">-
+    <input class="dmx" type="number" value="{{p.deeni_max or 60}}" style="width:50px">min
+    <button class="sm" onclick="dSet('{{p.id}}')">Set</button>
+    <span class="tokline" data-dn>{{p.deeni_msg or ''}}</span>
   </div>
   <div class="row news-only">
     <input class="kw" placeholder="keyword search" style="width:170px">
@@ -1592,6 +1617,7 @@ white-space:pre-wrap;word-break:break-all}
     <select id="newmode">
       <option value="news">Engine: News</option>
       <option value="fb">Engine: Facebook photos</option>
+      <option value="deeni">Engine: Deeni (hadith)</option>
     </select>
     <button onclick="discover(this)">Pages fetch karo</button>
     <div class="st" id="addstat" style="margin:8px 0"></div>
@@ -1728,6 +1754,17 @@ async function savePageSet(id,btn){
     per_fetch:+d0.querySelector('.s_per').value});
   btn.disabled=false;
   st(id,d.msg,d.ok?'#9f9':'#ff8a8a');
+}
+async function dTog(id){
+  const d=await call('/deeni/'+id+'/toggle');
+  st(id,'deeni: '+d.msg,d.ok?'#9f9':'#ff8a8a');
+  if(d.ok)setTimeout(()=>location.reload(),700);
+}
+async function dSet(id){
+  const d0=document.querySelector('[data-id="'+id+'"]');
+  const d=await call('/deeni/'+id+'/gap','POST',
+    {min:d0.querySelector('.dmn').value,max:d0.querySelector('.dmx').value});
+  d0.querySelector('[data-dn]').textContent=d.msg;
 }
 async function delPage(id){
   if(!confirm('page remove karun?'))return;
@@ -1875,6 +1912,10 @@ def boot_resume():
             continue
         start_worker(p["id"])
         print("resumed:", p["name"])
+
+
+import deeni
+app.register_blueprint(deeni.bp)
 
 
 if __name__ == "__main__":
