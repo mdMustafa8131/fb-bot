@@ -2,13 +2,6 @@ services:
   - type: web
     name: fb-bot
     runtime: python
-    plan: starter
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn -w 1 --threads 8 --timeout 300 app:app
-    envVars:
-      - key: DATA_DIR
-        value: /var/data
-    disk:
-      name: data
-      mountPath: /var/data
-      sizeGB: 1
