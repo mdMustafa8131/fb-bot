@@ -1,4 +1,4 @@
-import os, json, time, random, threading
+import os, sys, json, time, random, threading
 
 from flask import Blueprint, jsonify, request, render_template_string
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance
@@ -32,6 +32,14 @@ KEY = {
     "qabr": ("qabr", "maut", "kafan", "dafan", "qabristan", "marne", "murdar",
              "marhoom"),
 }
+
+
+def A():
+    m = sys.modules.get("__main__")
+    if m and hasattr(m, "get_page"):
+        return m
+    import app
+    return app
 
 
 def items():
@@ -147,7 +155,7 @@ def background(cat):
 
 
 def build(path, used=None):
-    import app
+    a = A()
     pool = items()
     if not pool:
         return False, "deeni.json khali hai"
@@ -169,10 +177,10 @@ def build(path, used=None):
     d.rounded_rectangle([m + 12, m + 12, 1080 - m - 12, 1080 - m - 12], 20,
                         outline=(120, 100, 40), width=1)
 
-    body = app.font(56, True, False)
-    ref = app.font(28, False, False)
-    head = app.font(30, True, False)
-    foot = app.font(23, False, False)
+    body = a.font(56, True, False)
+    ref = a.font(28, False, False)
+    head = a.font(30, True, False)
+    foot = a.font(23, False, False)
 
     d.text((540, m + 58), "HADEES-E-NABAWI", font=head, fill=GOLD, anchor="mm")
 
@@ -203,16 +211,16 @@ def caption(it):
 
 
 def post_one(pid):
-    import app
-    p = app.get_page(pid)
+    a = A()
+    p = a.get_page(pid)
     if not p or not p.get("token") or not p.get("page_id"):
         return False, "token ya page_id nahi"
     fn = f"deeni_{pid}_{random.randint(100000, 999999)}.jpg"
-    full = os.path.join(app.OUT, fn)
+    full = os.path.join(a.OUT, fn)
     ok, it = build(full, list(p.get("deeni_used") or []))
     if not ok:
         return False, it
-    sent, res = app.fb_post(p, full, caption(it))
+    sent, res = a.fb_post(p, full, caption(it))
     with LOCK:
         if sent:
             u = list(p.get("deeni_used") or [])
@@ -222,7 +230,7 @@ def post_one(pid):
             p["deeni_last"] = time.strftime("%d-%m %H:%M")
         else:
             p["deeni_msg"] = "Fail: " + str(res)[:60]
-        app.cfg_save(app.CFG)
+        a.cfg_save(a.CFG)
     return sent, (res if not sent else it.get("ref", ""))
 
 
@@ -235,9 +243,9 @@ def gap(p):
 def loop():
     while True:
         try:
-            import app
+            a = A()
             now = time.time()
-            for p in list(app.CFG["pages"]):
+            for p in list(a.CFG["pages"]):
                 if not p.get("deeni"):
                     continue
                 pid = p["id"]
@@ -250,7 +258,7 @@ def loop():
                 ok, msg = post_one(pid)
                 NEXT[pid] = time.time() + gap(p) * 60
                 p["deeni_next"] = time.strftime("%H:%M", time.localtime(NEXT[pid]))
-                app.cfg_save(app.CFG)
+                a.cfg_save(a.CFG)
                 print("[deeni]", p["name"], ok, msg)
         except Exception as e:
             print("[deeni err]", repr(e)[:120])
@@ -268,15 +276,15 @@ def boot():
 
 @bp.route("/deeni")
 def page():
-    import app
-    return render_template_string(TPL, cfg=app.CFG)
+    a = A()
+    return render_template_string(TPL, cfg=a.CFG)
 
 
 @bp.route("/deeni/preview")
 def preview():
-    import app
+    a = A()
     fn = f"deeni_prev_{random.randint(100000, 999999)}.jpg"
-    ok, it = build(os.path.join(app.OUT, fn))
+    ok, it = build(os.path.join(a.OUT, fn))
     if not ok:
         return jsonify({"ok": False, "msg": it})
     return jsonify({"ok": True, "file": fn, "ref": it.get("ref", ""),
@@ -285,8 +293,8 @@ def preview():
 
 @bp.route("/deeni/<pid>/toggle", methods=["POST"])
 def toggle(pid):
-    import app
-    p = app.get_page(pid)
+    a = A()
+    p = a.get_page(pid)
     if not p:
         return jsonify({"ok": False, "msg": "page nahi mila"})
     if not p.get("token"):
@@ -298,14 +306,14 @@ def toggle(pid):
         NEXT[pid] = time.time() + gap(p) * 60
     else:
         NEXT.pop(pid, None)
-    app.cfg_save(app.CFG)
+    a.cfg_save(a.CFG)
     return jsonify({"ok": True, "msg": "deeni " + ("ON" if p["deeni"] else "OFF")})
 
 
 @bp.route("/deeni/<pid>/gap", methods=["POST"])
 def set_gap(pid):
-    import app
-    p = app.get_page(pid)
+    a = A()
+    p = a.get_page(pid)
     if not p:
         return jsonify({"ok": False, "msg": "page nahi mila"})
     d = request.json or {}
@@ -317,7 +325,7 @@ def set_gap(pid):
     p["deeni_min"], p["deeni_max"] = lo, hi
     if p.get("deeni"):
         NEXT[pid] = time.time() + gap(p) * 60
-    app.cfg_save(app.CFG)
+    a.cfg_save(a.CFG)
     return jsonify({"ok": True, "msg": f"random {lo}-{hi} min"})
 
 
